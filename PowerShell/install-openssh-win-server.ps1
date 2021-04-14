@@ -85,7 +85,7 @@ PasswordAuthentication yes
 
 # override default of no subsystems
 Subsystem	sftp	sftp-server.exe
-Subsystem   powershell c:/progra~1/powershell/6/pwsh.exe -sshs -NoLogo -NoProfile
+Subsystem   powershell c:/progra~1/powershell/7/pwsh.exe -sshs -NoLogo -NoProfile
 
 # Example of overriding settings on a per-user basis
 #Match User anoncvs
@@ -101,6 +101,6 @@ Match Group administrators
 
 Out-File -FilePath C:\ProgramData\ssh\sshd_config_replace -InputObject $config
 
-Invoke-WebRequest -Uri https://powershellcourse.blob.core.windows.net/pwsh/pwsh.msi -OutFile C:\Users\Public\Downloads\pwsh.msi
+Invoke-WebRequest -Uri https://github.com/PowerShell/PowerShell/releases/download/v7.1.3/PowerShell-7.1.3-win-x64.msi -OutFile C:\Users\Public\Downloads\pwsh.msi
 
 Start-Sleep -s 30
